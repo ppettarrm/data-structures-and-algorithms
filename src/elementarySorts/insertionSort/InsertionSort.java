@@ -34,7 +34,7 @@ public class InsertionSort {
         }
     }
 
-    private static <T extends Comparable<T>> void print(T[] arr){
+    private static <T> void print(T[] arr){
         System.out.println("Sortirani niz: \n");
         for(int i = 1; i < arr.length + 1; i++){
             System.out.print(arr[i - 1] + " ");
