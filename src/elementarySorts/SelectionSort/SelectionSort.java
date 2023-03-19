@@ -37,10 +37,9 @@ public class SelectionSort {
         for(int i = arr.length - 1; i >= 1; i--){
             int maxIndex = 0;
             for(int j = 1; j <= i; j++){
-                if(arr[maxIndex].compareTo(arr[j]) < 0)
+                if(arr[j].compareTo(arr[maxIndex]) > 0)
                     maxIndex = j;
             }
-
             if(maxIndex != i){
                 T tmp = arr[i];
                 arr[i] = arr[maxIndex];
@@ -103,5 +102,4 @@ public class SelectionSort {
         }
         System.out.println();
     }
-
 }
