@@ -1,6 +1,4 @@
-package elementarySorts.bruteForceSort;
-
-import elementarySorts.insertionSort.InsertionSort;
+package arraySort.elementarySorts.bruteForceSort;
 
 import java.util.Comparator;
 import java.util.Random;

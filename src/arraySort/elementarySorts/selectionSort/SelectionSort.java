@@ -1,4 +1,4 @@
-package elementarySorts.selectionSort;
+package arraySort.elementarySorts.selectionSort;
 
 import java.util.Comparator;
 import java.util.Random;

@@ -1,4 +1,6 @@
-package elementarySorts.shellSort;
+package arraySort.elementarySorts.shellSort;
+
+import java.util.Comparator;
 
 public class ShellSort {
 
@@ -12,6 +14,23 @@ public class ShellSort {
                     T curr = arr[j];
                     int prev = j - k;
                     while (prev >= i && arr[prev].compareTo(curr) > 0){
+                        arr[prev + k] = arr[prev];
+                        prev -= k;
+                    }
+                    arr[prev + k] = curr;
+                }
+            }
+        }
+    }
+
+    public static <T> void sort(T[] arr, Comparator<T> cmp){
+        for(int k : gaps){
+            if(k > arr.length) continue;
+            for(int i = 0; i < k; i++){
+                for(int j = i + k; j < arr.length; j += k){
+                    T curr = arr[j];
+                    int prev = j - k;
+                    while(prev >= i && cmp.compare(arr[prev], curr) > 0){
                         arr[prev + k] = arr[prev];
                         prev -= k;
                     }

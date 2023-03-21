@@ -1,4 +1,4 @@
-package elementarySorts.exchangeSort;
+package arraySort.elementarySorts.exchangeSort;
 
 import java.util.Comparator;
 

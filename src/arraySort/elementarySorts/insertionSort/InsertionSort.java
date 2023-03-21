@@ -1,7 +1,6 @@
-package elementarySorts.insertionSort;
+package arraySort.elementarySorts.insertionSort;
 
-import org.jetbrains.annotations.NotNull;
-
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 

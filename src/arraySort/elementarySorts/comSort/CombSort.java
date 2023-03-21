@@ -1,4 +1,6 @@
-package comSort;
+package arraySort.elementarySorts.comSort;
+
+import java.util.Comparator;
 
 public class CombSort {
 
@@ -27,5 +29,23 @@ public class CombSort {
             }
             sorted = k == 1 && !exchOccured;
         } while (!sorted);
+    }
+
+    public static <T> void sort(T[] arr, Comparator<T> cmp){
+        int k = arr.length; boolean sorted = false;
+        do{
+            k = nextGap(k);
+            boolean exchange = false;
+
+            for(int i = 0; i < arr.length - k; i++){
+                if(cmp.compare(arr[i], arr[i + k])> 0){
+                    T tmp = arr[i];
+                    arr[i] = arr[i + k];
+                    arr[i + k] = tmp;
+                    exchange = true;
+                }
+            }
+            sorted = k == 1 && !exchange;
+        }while (!sorted);
     }
 }
